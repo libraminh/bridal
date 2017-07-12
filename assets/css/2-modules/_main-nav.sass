@@ -1,0 +1,41 @@
+.main-nav
+  .navbar
+    background: none !important
+    border: none
+    padding-left: 30px
+    padding-top: 10px
+
+  .navbar-brand
+    font-size: 22px
+    color: $white-color
+    padding-right: 50px
+
+    .text-color
+      font-weight: 600
+
+  .navbar-nav
+    a
+      color: $white-color !important
+      font-weight: 600
+      font-size: 12px
+
+      &:hover::after
+        width: 100%
+
+      &:after
+        display: block
+        content: ''
+        width: 0
+        height: 1px
+        margin: 0 auto
+        background: $white-color
+        transition: all .2s ease-in-out
+
+  .navbar-toggle
+    background: $accent-color
+
+    &:hover
+      background: lighten($accent-color, 5%)
+
+    .icon-bar
+      background: lighten($accent-color, 20%)

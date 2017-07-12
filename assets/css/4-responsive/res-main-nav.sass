@@ -1,0 +1,24 @@
+@media (max-width: $screen-sm-max)
+  .main-nav
+    .navbar-nav
+      li
+        border-bottom: 1px dotted $text-color
+
+        &:last-child
+          border: none
+
+      a
+        transition: all .2s ease-in-out
+
+      a:hover::after
+        width: 0
+
+      a:hover
+        padding-left: 25px
+
+    .navbar-collapse
+      background: rgba($accent-color, 0.8)
+
+@media (max-width: $screen-xs-max)
+  .navbar
+    padding: 10px 0 0 !important
