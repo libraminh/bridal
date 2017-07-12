@@ -5970,7 +5970,7 @@ section.thumb4 {
     max-width: 120%;
     display: block; }
 
-@media (max-width: 991px) {
+@media (max-width: 765px) {
   .main-nav .navbar-nav li {
     border-bottom: 1px dotted #bcbcbc; }
     .main-nav .navbar-nav li:last-child {
