@@ -5914,22 +5914,25 @@ section.wrap-thumb {
   background-size: cover;
   background-position: top;
   background-attachment: fixed; }
-  section.wrap-thumb .buble {
-    width: 230px;
-    border-top: 1px solid #b2984a;
-    position: absolute;
-    top: 43%;
-    left: 1%; }
-  section.wrap-thumb .col-md-5 {
+  section.wrap-thumb .left-thumb {
     margin-top: 170px;
     margin-left: 130px;
     color: #fff; }
-    section.wrap-thumb .col-md-5 h4, section.wrap-thumb .col-md-5 h1 {
+    section.wrap-thumb .left-thumb:after {
+      display: block;
+      content: '';
+      width: 95%;
+      height: 1px;
+      background: #b2984a;
+      position: absolute;
+      top: 50px;
+      left: -100%; }
+    section.wrap-thumb .left-thumb h4, section.wrap-thumb .left-thumb h1 {
       font-weight: 600; }
-    section.wrap-thumb .col-md-5 h1 {
+    section.wrap-thumb .left-thumb h1 {
       font-size: 45px;
       margin-top: 0; }
-    section.wrap-thumb .col-md-5 p {
+    section.wrap-thumb .left-thumb p {
       margin: 25px 0;
       color: #bcbcbc;
       font-weight: 600; }
@@ -5954,6 +5957,10 @@ section.thumb3 {
   background-image: url(../img/home/home-03.jpg); }
   section.thumb3 .navbar-nav a {
     color: #555555 !important; }
+    section.thumb3 .navbar-nav a:after {
+      background: #555555; }
+  section.thumb3 .navbar-brand {
+    color: #555555; }
   section.thumb3 .col-md-5 {
     color: #555555; }
     section.thumb3 .col-md-5 p {
