@@ -22,10 +22,14 @@
         color: $white-color
         border: 1px solid $accent-color
 
+      &:hover .product-pic
+        transform: rotateY(180deg)
+
     .product-pic
       display: block
       width: 180px
       height: 180px
+      transition: all .3s ease-in-out
 
     .product-name
       color: $text-color-3
