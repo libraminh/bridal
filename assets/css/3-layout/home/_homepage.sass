@@ -6,10 +6,9 @@ section.wrap-thumb
     repeat: no-repeat
     size: cover
     position: top
-    attachment: fixed
 
   .left-thumb
-    margin-top: 170px
+    margin-top: 250px
     margin-left: 130px
     color: $white-color
 
@@ -36,9 +35,10 @@ section.wrap-thumb
       font-weight: 600
 
   .social-group
-    position: absolute
+    position: fixed
     left: 5%
     bottom: 5%
+    z-index: 10
 
     i
       padding: 0 10px
@@ -84,5 +84,39 @@ section.thumb4
     margin-top: 50px
 
   .map
+    margin-top: 80px
     max-width: 120%
     display: block
+
+.direction
+  position: fixed
+  top: 45%
+  right: 0
+  z-index: 1
+
+  .direct-line
+    display: block
+    padding: 5px 0
+    position: absolute
+    top: 0
+    right: 0
+
+  .line1
+    border-top: 1px solid $text-color-2
+    width: 60px
+    top: 0px
+
+  .line2
+    border-top: 1px solid $text-color-2
+    top: 25px
+    width: 60px
+
+  .line3
+    border-top: 1px solid $text-color-2
+    top: 50px
+    width: 60px
+
+  .line4
+    border-top: 1px solid $text-color-2
+    top: 75px
+    width: 60px

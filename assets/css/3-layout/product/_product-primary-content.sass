@@ -1,0 +1,58 @@
+.main-content
+
+  .product-box
+
+    a
+      transition: all .2s ease-in-out
+
+    .thumbnail
+      border: 1.5px solid $border-color-2
+      border-radius: 0
+      transition: all .2s ease-in-out
+      min-height: 368px
+
+      &:hover a
+        color: $black-color
+
+      &:hover
+        box-shadow: 0px 7px 15px 1px rgba($text-color-2,0.2)
+
+      &:hover .btn-cart
+        background: $accent-color
+        color: $white-color
+        border: 1px solid $accent-color
+
+    .product-pic
+      display: block
+      width: 180px
+      height: 180px
+
+    .product-name
+      color: $text-color-3
+      display: block
+      font-weight: 600
+      font-size: 17px
+      margin-bottom: 10px
+
+    .btn-cart
+      margin-top: 10px
+      color: $text-color-2
+
+  .detail
+    margin-top: 28px
+
+  .detail-text
+    color: $text-color-2
+
+  #sel1
+    border-radius: 0
+    border-color: #ebebeb
+    color: $text-color-2
+    margin-bottom: 30px
+
+    &:focus
+      outline: none !important
+
+    option
+      color: $black-color
+      padding: 50px 20px
