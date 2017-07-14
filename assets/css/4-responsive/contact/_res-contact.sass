@@ -1,10 +1,13 @@
 @media (max-width: $screen-sm-max)
-  section.contact-map
-    .left-contact-map
-      position: relative
+  .wrap-text
+    transform: translateY(10px)
+    position: absolute
+    top: 10%
+    left: 12%
 
-    .wrap-text
-      position: relative
+  section.contact-mes
+    h2
+      margin-top: 380px
 
   footer.contact-footer
     text-align: center
@@ -16,3 +19,13 @@
 
       p
         text-align: center
+
+
+@media (max-width: $screen-xs-max)
+  section.contact-mes
+    h2
+      margin-top: 150px
+
+  .contact-map-box
+    img
+      height: 100% !important

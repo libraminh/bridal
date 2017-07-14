@@ -5927,7 +5927,7 @@ button.close {
   .main-nav .navbar-nav a:hover {
     color: #b2984a !important; }
 
-.main-nav .navbar-toggle:hover {
+.main-nav .navbar-toggle:hover, .main-nav .navbar-toggle:focus {
   background: #bba35b; }
 
 .main-nav .navbar-toggle .icon-bar {
@@ -6193,16 +6193,15 @@ section.contact-header {
     margin-top: 10px; }
 
 section.contact-map {
-  height: 400px;
-  position: relative; }
+  height: 400px; }
   section.contact-map .left-contact-map {
     color: #fff;
-    background: pink;
-    height: 65vh;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1000; }
+    background-image: url(../img/contact/map-contact-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: pink;
+    height: 100%; }
     section.contact-map .left-contact-map:after {
       display: block;
       content: '';
@@ -6218,8 +6217,11 @@ section.contact-map {
       color: #dfdfdf; }
     section.contact-map .left-contact-map .wrap-contact-content {
       background: rgba(178, 152, 74, 0.85);
-      width: 100%;
-      height: 100%; }
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
     section.contact-map .left-contact-map .wrap-text {
       position: absolute;
       top: 10%;
@@ -6246,8 +6248,7 @@ section.contact-map {
 section.contact-mes {
   background: #252525;
   padding: 70px 0;
-  color: #fff;
-  height: 430px; }
+  color: #fff; }
   section.contact-mes h2 {
     margin-bottom: 50px; }
   section.contact-mes input, section.contact-mes textarea {
@@ -6390,10 +6391,15 @@ section.promotion-primary .promo-title {
     z-index: 1000; } }
 
 @media (max-width: 991px) {
-  section.contact-map .left-contact-map {
-    position: relative; }
-  section.contact-map .wrap-text {
-    position: relative; }
+  .wrap-text {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    position: absolute;
+    top: 10%;
+    left: 12%; }
+  section.contact-mes h2 {
+    margin-top: 380px; }
   footer.contact-footer {
     text-align: center;
     padding: 60px 0 25px; }
@@ -6402,6 +6408,12 @@ section.promotion-primary .promo-title {
       margin: 35px 0; }
       footer.contact-footer .copy-part p {
         text-align: center; } }
+
+@media (max-width: 767px) {
+  section.contact-mes h2 {
+    margin-top: 150px; }
+  .contact-map-box img {
+    height: 100% !important; } }
 
 @media (max-width: 991px) {
   section.promotion-primary .padding-change-left, section.promotion-primary .padding-change-right {
