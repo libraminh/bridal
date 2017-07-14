@@ -6407,3 +6407,7 @@ section.promotion-primary .promo-title {
   section.promotion-primary .padding-change-left, section.promotion-primary .padding-change-right {
     padding: 0 15px;
     margin: 20px 0; } }
+
+@media (max-width: 767px) {
+  section.promotion-primary .wrap-promo-content {
+    margin: 30px 0 40px; } }
