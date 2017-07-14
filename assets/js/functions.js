@@ -8,6 +8,9 @@ function scrollReveal() {
   window.sr = ScrollReveal();
   sr.reveal('.navbar', { duration: 1000 });
   sr.reveal('.left-thumb', { duration: 1000, distance: '200px', origin: 'left' });
+  sr.reveal('.promo-content-odd:first-child', { duration: 1200, delay: 300, distance: '400px', origin: 'left' });
+  sr.reveal('.promo-content-odd', { duration: 1200, distance: '400px', origin: 'left' });
+  sr.reveal('.promo-content-even', { duration: 1200, distance: '400px', origin: 'right' });
 }
 
 function scrollPage() {

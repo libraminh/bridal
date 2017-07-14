@@ -3,7 +3,7 @@
   border-radius: 0
   color: $white-color
   font-size: 15px
-  font-weight: 600
+  @extend .font-weight
   padding: 10px 25px
   transition: all .2s ease-in-out
 
@@ -28,3 +28,20 @@
   color: $text-color-2
   text-decoration: line-through
   margin-right: 10px
+
+// Social Icon
+.social-group
+  position: fixed
+  left: 5%
+  bottom: 5%
+  z-index: 10
+
+  i
+    padding: 0 10px
+    color: $text-color
+    font-size: 20px
+    transition: all .2s ease-in-out
+
+
+    &:hover
+      color: $accent-color

@@ -1,0 +1,26 @@
+=line-yellow($color, $width, $top, $left)
+  display: block
+  content: ''
+  width: $width
+  height: 1px
+  background: $color
+  position: absolute
+  top: $top
+  left: $left
+
+=promo-line($top, $left)
+  .promo-title
+    position: relative
+
+    &:after
+      display: block
+      content: ''
+      width: 30%
+      height: 1px
+      background: $accent-color
+      position: absolute
+      top: $top
+      left: $left
+
+.font-weight
+  font-weight: 600

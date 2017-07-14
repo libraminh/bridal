@@ -11,28 +11,19 @@
     padding-right: 50px
 
     .text-color
-      font-weight: 600
+      @extend .font-weight
 
   .navbar-nav
     a
       color: $white-color !important
-      font-weight: 600
+      @extend .font-weight
       font-size: 12px
+      transition: all .2s ease-in-out
 
-      &:hover::after
-        width: 100%
-
-      &:after
-        display: block
-        content: ''
-        width: 0
-        height: 1px
-        margin: 0 auto
-        background: $white-color
-        transition: all .2s ease-in-out
+      &:hover
+        color: $accent-color !important
 
   .navbar-toggle
-    background: $accent-color
 
     &:hover
       background: lighten($accent-color, 5%)

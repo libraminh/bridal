@@ -1,0 +1,52 @@
+section.promotion-primary
+
+  .col-md-5
+    padding: 50px 0 0
+
+    .promo-date
+      color: $accent-color
+      @extend .font-weight
+      font-size: 15px
+
+    .promo-title
+      @extend .font-weight
+
+    .promo-text
+      color: $text-color-3
+
+    .btn-accent
+      font-size: 13px
+
+  .promo-img
+    width: 100%
+    display: block
+    margin: 0 auto
+
+  .padding-change-left
+    padding-left: 45px
+
+    +promo-line(50%, -35%)
+
+
+  .padding-change-right
+    padding-right: 45px
+
+    +promo-line(50%, 103%)
+
+
+  .wrap-promo-content
+    margin: 20px 0
+
+  .promo-title
+    position: relative
+
+    &:after
+      display: block
+      content: ''
+      width: 30%
+      height: 1px
+      background: $accent-color
+      position: absolute
+      top: 50%
+      left: 103%
+      z-index: 1

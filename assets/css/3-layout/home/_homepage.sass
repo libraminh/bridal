@@ -14,17 +14,10 @@ section.wrap-thumb
     color: $white-color
 
     &:after
-      display: block
-      content: ''
-      width: 95%
-      height: 1px
-      background: $accent-color
-      position: absolute
-      top: 50px
-      left: -100%
+      +line-yellow($accent-color, 95%, 50px, -100%)
 
     h4, h1
-      font-weight: 600
+      @extend .font-weight
 
     h1
       font-size: 45px
@@ -33,23 +26,7 @@ section.wrap-thumb
     p
       margin: 25px 0
       color: $text-color
-      font-weight: 600
-
-  .social-group
-    position: fixed
-    left: 5%
-    bottom: 5%
-    z-index: 10
-
-    i
-      padding: 0 10px
-      color: $text-color
-      font-size: 20px
-      transition: all .2s ease-in-out
-
-
-      &:hover
-        color: $accent-color
+      @extend .font-weight
 
 section.thumb2
   background-image: url(../img/home/home-02.jpg)

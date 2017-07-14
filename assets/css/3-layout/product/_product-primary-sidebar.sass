@@ -23,7 +23,7 @@
   // Sidebar Nav
   .sidebar-nav
     h3
-      font-weight: 600
+      @extend .font-weight
 
     li
       border-bottom: 1px solid $border-color
@@ -59,17 +59,11 @@
       &:hover .media-body a
         color: $accent-color
 
-      &:hover .media-left img
-        transform: scale(1.1)
-
     .media-left
       overflow: hidden
 
-      img
-        transition: all .2s ease-in-out
-
     .media-heading
-      font-weight: 600
+      @extend .font-weight
       font-size: 14px
 
     .media-object
