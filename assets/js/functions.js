@@ -4,8 +4,6 @@ $(document).ready(function() {
 
 })
 
-
-
 $(window).scroll(function(){
   changeTextColor();
 })
@@ -16,7 +14,7 @@ function changeTextColor() {
       wScroll = $(window).scrollTop(),
       wHeight = $(window).height();
 
-  var link = $('.navbar-nav a, .navbar-brand');
+  var link = $('.navbar-nav a, .navbar-brand, .social-group i');
 
   if(positionSection1 - wHeight/10 < wScroll && wScroll < positionSection2) {
     $(link).addClass('change-color');
