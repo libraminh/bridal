@@ -3954,14 +3954,14 @@ tbody.collapse.in {
   background-color: #f8f8f8;
   border-color: #e7e7e7; }
   .navbar-default .navbar-brand {
-    color: #777; }
+    color: #ffffff; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-      color: #5e5e5e;
+      color: #e6e6e6;
       background-color: transparent; }
   .navbar-default .navbar-text {
     color: #777; }
   .navbar-default .navbar-nav > li > a {
-    color: #777; }
+    color: #ffffff; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #333;
       background-color: transparent; }
@@ -3985,7 +3985,7 @@ tbody.collapse.in {
     color: #555; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-      color: #777; }
+      color: #ffffff; }
       .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #333;
         background-color: transparent; }
@@ -3996,11 +3996,11 @@ tbody.collapse.in {
       color: #ccc;
       background-color: transparent; } }
   .navbar-default .navbar-link {
-    color: #777; }
+    color: #ffffff; }
     .navbar-default .navbar-link:hover {
       color: #333; }
   .navbar-default .btn-link {
-    color: #777; }
+    color: #ffffff; }
     .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
       color: #333; }
     .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus,
@@ -5857,6 +5857,12 @@ button.close {
 .left-thumb p {
   font-size: 13px; }
 
+.change-color {
+  color: #555555 !important; }
+
+.change-color-2 {
+  color: #fff !important; }
+
 .font-weight, .btn-accent, .main-nav .navbar-brand .text-color, .main-nav .navbar-nav a, section.wrap-thumb .left-thumb h4, section.wrap-thumb .left-thumb h1, section.wrap-thumb .left-thumb p, .wrap-primary .sidebar-nav h3, .wrap-primary .top-sale .media-heading, .main-content .product-box .product-name, section.contact-map .left-contact-map h1, section.contact-map .left-contact-map h4, section.contact-mes h2, section.promotion-primary .col-md-5 .promo-date, section.promotion-primary .col-md-5 .promo-title {
   font-weight: 600; }
 
@@ -5911,7 +5917,10 @@ button.close {
   background: none !important;
   border: none;
   padding-left: 30px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  top: 0;
+  left: 0;
+  right: 0; }
 
 .main-nav .navbar-brand {
   font-size: 22px;
@@ -5919,7 +5928,7 @@ button.close {
   padding-right: 50px; }
 
 .main-nav .navbar-nav a {
-  color: #fff !important;
+  color: #fff;
   font-size: 12px;
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;

@@ -4,9 +4,31 @@ $(document).ready(function() {
 
 })
 
+
+
+$(window).scroll(function(){
+  changeTextColor();
+})
+
+function changeTextColor() {
+  var positionSection1 = $('section.thumb3').offset().top,
+      positionSection2 = $('section.thumb4').offset().top,
+      wScroll = $(window).scrollTop(),
+      wHeight = $(window).height();
+
+  var link = $('.navbar-nav a, .navbar-brand');
+
+  if(positionSection1 - wHeight/10 < wScroll && wScroll < positionSection2) {
+    $(link).addClass('change-color');
+  } else {
+    $(link).removeClass('change-color');
+  }
+
+}
+
 function scrollReveal() {
   window.sr = ScrollReveal();
-  sr.reveal('.navbar', { duration: 1000 });
+  // sr.reveal('.navbar', { duration: 1000 });
   sr.reveal('.left-thumb', { duration: 1000, distance: '200px', origin: 'left' });
   sr.reveal('.promo-content-odd:first-child', { duration: 1200, delay: 300, distance: '400px', origin: 'left' });
   sr.reveal('.promo-content-odd', { duration: 1200, distance: '400px', origin: 'left' });
