@@ -24,14 +24,12 @@ function changeTextColor() {
     } else {
       $(social).removeClass('change-color');
     }
-    
+
     if(positionSection1 - wHeight/10 < wScroll && wScroll < positionSection2) {
       $(link).addClass('change-color');
     } else {
       $(link).removeClass('change-color');
     }
-
-
 
   }
 }
