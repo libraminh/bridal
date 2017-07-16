@@ -6574,7 +6574,8 @@ footer.contact-footer {
     text-align: right; }
 
 section.promotion-primary {
-  padding: 50px 0; }
+  padding: 50px 0;
+  overflow: hidden; }
   section.promotion-primary .col-md-5 {
     padding: 50px 0 0; }
     section.promotion-primary .col-md-5 .promo-date {
