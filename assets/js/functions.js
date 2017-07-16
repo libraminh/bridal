@@ -10,7 +10,7 @@ $(window).scroll(function(){
 
 function changeTextColor() {
 
-  if (window.location.pathname == "/index.html") {
+  if($('body').is('.ChangeText')) {
 
     var positionSection1 = $('section.thumb3').offset().top,
         positionSection2 = $('section.thumb4').offset().top,
@@ -32,6 +32,7 @@ function changeTextColor() {
     }
 
   }
+
 }
 
 function scrollReveal() {
