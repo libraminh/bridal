@@ -5,23 +5,35 @@ $(document).ready(function() {
 })
 
 $(window).scroll(function(){
-  changeTextColor();
+      changeTextColor();
 })
 
 function changeTextColor() {
-  var positionSection1 = $('section.thumb3').offset().top,
-      positionSection2 = $('section.thumb4').offset().top,
-      wScroll = $(window).scrollTop(),
-      wHeight = $(window).height();
 
-  var link = $('.navbar-nav a, .navbar-brand, .social-group i');
+  if (window.location.pathname == "/index.html") {
 
-  if(positionSection1 - wHeight/10 < wScroll && wScroll < positionSection2) {
-    $(link).addClass('change-color');
-  } else {
-    $(link).removeClass('change-color');
+    var positionSection1 = $('section.thumb3').offset().top,
+        positionSection2 = $('section.thumb4').offset().top,
+        wScroll = $(window).scrollTop(),
+        wHeight = $(window).height(),
+        link = $('.navbar-nav a, .navbar-brand'),
+        social = $('.social-group i');
+
+    if(positionSection1 - wHeight/1.1 < wScroll && wScroll < positionSection2 - wHeight/1.1) {
+      $(social).addClass('change-color');
+    } else {
+      $(social).removeClass('change-color');
+    }
+    
+    if(positionSection1 - wHeight/10 < wScroll && wScroll < positionSection2) {
+      $(link).addClass('change-color');
+    } else {
+      $(link).removeClass('change-color');
+    }
+
+
+
   }
-
 }
 
 function scrollReveal() {
