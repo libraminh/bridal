@@ -28,29 +28,35 @@
     li
       border-bottom: 1px solid $border-color
       padding: 10px 0
+      position: relative
+
+
 
     a
       color: $text-color-2
       position: relative
       transition: all .3s ease-in-out
 
-      &:hover
-        color: $accent-color
-        padding-left: 20px
-
-      &:hover::after
-        opacity: 1
-        transition: all .2s ease-in-out
-
-      &:after
+      &:before
         opacity: 0
         content: ''
         width: 45px
         height: 1px
         background: $accent-color
         position: absolute
-        top: 5px
+        top: 50%
         left: -35px
+
+      &:hover
+        color: $accent-color
+        padding-left: 20px
+      
+      &:hover::before
+        opacity: 1
+        height: 1px
+        transition: all .2s ease-in-out
+
+
 
   // TOP SALE
   .top-sale

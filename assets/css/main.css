@@ -6365,30 +6365,32 @@ section.product-home {
     font-size: 20px; }
   .wrap-primary .sidebar-nav li {
     border-bottom: 1px solid #f5f5f5;
-    padding: 10px 0; }
+    padding: 10px 0;
+    position: relative; }
   .wrap-primary .sidebar-nav a {
     color: #a2a2a2;
     position: relative;
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
-    .wrap-primary .sidebar-nav a:hover {
-      color: #b2984a;
-      padding-left: 20px; }
-    .wrap-primary .sidebar-nav a:hover::after {
-      opacity: 1;
-      -webkit-transition: all .2s ease-in-out;
-      -o-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out; }
-    .wrap-primary .sidebar-nav a:after {
+    .wrap-primary .sidebar-nav a:before {
       opacity: 0;
       content: '';
       width: 45px;
       height: 1px;
       background: #b2984a;
       position: absolute;
-      top: 5px;
+      top: 50%;
       left: -35px; }
+    .wrap-primary .sidebar-nav a:hover {
+      color: #b2984a;
+      padding-left: 20px; }
+    .wrap-primary .sidebar-nav a:hover::before {
+      opacity: 1;
+      height: 1px;
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
   .wrap-primary .top-sale .media:hover .media-body a {
     color: #b2984a; }
   .wrap-primary .top-sale .media-left {

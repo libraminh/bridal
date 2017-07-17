@@ -69,11 +69,9 @@
         
       .col-sm-12.col-md-9.main-content        
         .row
-          .col-md-4.tab-sort.pull-right       
-            .form-group
-              select#sel1.form-control(placeholder="Sort By")
-                option(disabled selected hidden) Sort By
-                |   
+          .col-md-4.form-group.pull-right
+            form
+              select.selectpicker.form-control(title='Sort By...')
                 option Name
                 |   
                 option Tag
