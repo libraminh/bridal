@@ -15,10 +15,15 @@ body, html
     border-radius: 10px
 
 .form-control:focus
-  box-shadow: none 
+  box-shadow: none
 
 .text-color
   color: $accent-color
+  @extend %font-weight
+
+.text-grey
+  color: $text-color-4
+  @extend %font-weight
 
 .index
   color: $accent-color !important
@@ -42,3 +47,32 @@ body, html
 
 .change-color-2
   color: $white-color !important
+
+.box-title
+  overflow: hidden
+  margin-bottom: 12px
+
+  .cart-title
+    display: inline-block
+    position: relative
+    @extend %font-weight
+
+    &:after
+      display: block
+      content: ''
+      width: 500%
+      height: 2px
+      background: $accent-color
+      position: absolute
+      top: 50%
+      left: 110%
+
+.media
+  .media-object
+    width: 100px
+
+  .media-left
+    padding-right: 15px
+
+  .sub-media
+    width: 70px !important

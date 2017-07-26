@@ -1,0 +1,182 @@
+section.cart-header
+  .breadcrumb
+    background: none
+    padding: 0
+
+    li.active::before
+      content: '//'
+      color: $text-color
+
+    li.active, a
+      color: $text-color
+
+section.cart-process
+  padding: 100px 0
+
+  .process-bar
+    li
+      display: inline-block
+      margin: 0 100px
+      position: relative
+
+    a
+      color: $dark-color
+      @extend %font-weight
+      display: block
+      background: $border-color-2
+      width: 22px
+      height: 22px
+      padding-top: 1.5px
+      margin: 0 auto 15px
+      border-radius: 50%
+
+    p
+      color: $text-color-2
+
+    .pass-line
+      a
+        background: rgba($accent-color,0.6)
+
+    .index-process
+      a
+        background: $accent-color
+        color: $white-color
+
+      p
+        @extend %font-weight
+        color: $dark-color
+
+    .process-line
+      &:before, &:after
+        display: block
+        content: ''
+        width: 220px
+        height: 1.5px
+        background: $border-color-2
+        position: absolute
+        top: 15%
+        right: 60px
+
+      &:after
+        left: 60px
+
+  .wrap-table
+
+    th
+      background: $accent-color
+      color: $white-color
+
+    tbody
+      td
+        vertical-align: middle
+        padding: 10px 20px
+
+    img
+      width: 76px
+      display: block
+      margin: 0 auto
+
+    .table-number
+      width: 70px
+      height: 42px
+      padding: 5px
+      border: 1.5px solid $border-color-2
+
+    .tabe-number::-webkit-inner-spin-button
+      opacity: 1 !important
+
+    .box-table
+      i
+        font-size: 30px
+        margin-top: 7px
+        color: $text-color
+
+  .total-cart
+    .left-cart, .right-cart
+      border: 1px solid $border-color-2
+
+      p
+        margin: 7px 0
+
+    .left-cart
+      background: $border-color
+
+    .btn-accent
+      padding: 7px 25px
+
+
+// CHECKOUT
+.wrap-shipping
+  input, .bs-placeholder
+    border-radius: 0 !important
+
+  .bootstrap-select
+    width: 100% !important
+    border-radius: 0
+
+  .checkout
+    input
+      width: 50px !important
+      height: 50px !important
+
+  .width
+    width: 60% !important
+
+  .small
+    font-size: 10px
+
+  td
+    padding: 10px 0
+
+  .checkout-list
+    li
+      padding: 10px 0
+      border-top: 1px solid $text-color-2
+
+    .text-color
+      font-size: 20px
+
+// Complete
+.cart-complete-title
+  position: relative
+  @extend %font-weight
+
+  &::after, &::before
+    display: block
+    content: ''
+    width: 38%
+    height: 2px
+    background: $accent-color
+    position: absolute
+    top: 50%
+
+  &::after
+    left: 0
+
+  &::before
+    right: 0
+
+.box-title
+  p
+    margin: 0px 0 60px
+    color: #777
+
+// Section Checkout
+section.checkout
+  .process-bar
+    .process-line
+      &:before
+        background: $accent-color
+
+// Section Complete
+section.complete
+  .process-bar
+    .process-line
+      &:before, &:after
+        background: $accent-color
+
+  #Capa_2
+    width: 250px
+    height: 250px
+    fill: rgba($accent-color, 0.8)
+    margin: 50px 0

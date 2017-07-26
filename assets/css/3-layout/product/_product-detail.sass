@@ -1,0 +1,125 @@
+.product-detail
+  .description
+    border: 1px solid $border-color-2
+    padding: 35px
+    color: $text-color-4
+
+  .detail-content
+
+    .btn-accent
+      margin: 20px 0
+
+    .tag
+      margin: 0
+
+    h2
+      margin: 0 0 30px 0
+
+    span
+      display: inline-block
+      font-size: 20px
+      @extend %font-weight
+
+    .brand
+      margin-top: 5px
+      color: $text-color-3
+      @extend %font-weight
+
+      margin: 25px 0
+
+    .size
+      display: inline-block
+      float: left
+      margin-right: 20px
+
+      .btn-group.bootstrap-select.form-control
+        width: 80px !important
+
+      .dropdown-toggle, .bs-placeholder, .btn-default
+        height: 42px !important
+        width: 80px !important
+        border-radius: 0
+
+      .dropdown-menu
+        top: 123% !important
+        width: 80px !important
+
+      span
+        font-size: 13px
+        color: $text-color-3
+
+.product-des, .carousel-like
+  margin-top: 30px
+
+
+.carousel-2, .carousel-3
+  position: relative
+
+  .owl-next, .owl-prev
+    position: absolute !important
+    top: 12% !important
+    font-size: 20px !important
+    padding: 9px!important
+    border-radius: 0 !important
+    background: rgba($text-color-4,0.8) !important
+
+    &.disabled
+      background: rgba($text-color-4,0.5) !important
+    &:hover
+      background: rgba($text-color-4,0.5) !important
+
+  .owl-next
+    right: -5px !important
+
+  .owl-prev
+    left: -5px !important
+
+.carousel-3
+  .owl-next, .owl-prev
+    top: 30% !important
+
+.carousel-4
+  img
+    width: 72px
+
+.carousel-4, .carousel-1, .carousel-2
+  margin-bottom: 10px
+
+  img
+    border: 1px solid $border-color-2
+    padding: 3px
+
+.carousel-4, .carousel-2
+  img
+    &:hover, &.active-color
+      border-color: $accent-color
+
+.carousel-3
+  .item
+    &:hover .btn-cart
+      background: $accent-color
+
+    &:hover .btn-cart i
+      color: $white-color
+
+  .caption
+    border-bottom: 1px solid $border-color-2
+    border-left: 1px solid $border-color-2
+    border-right: 1px solid $border-color-2
+
+    .product-name
+      margin-top: 10px
+      display: block
+
+    .btn-cart
+      margin-bottom: 10px
+
+      i
+        color: $text-color-2
+
+    a
+      color: $text-color-3
+      @extend %font-weight
+
+    p
+      margin: 10px 0 !important

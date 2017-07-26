@@ -1,0 +1,79 @@
+section.cart-process
+  .row
+    .col-md-12
+      ul.process-bar.text-center.list-unstyled
+        li.index-process
+          a(href="#") 1
+          p Shopping Cart
+        li.process-line
+          a(href="#") 2
+          p Check Out
+        li
+          a(href="#") 3
+          p Order Complete
+          
+    .col-md-12
+      .box-title
+        h3.cart-title.text-uppercase Shopping Cart
+  
+      .wrap-table.table-responsive
+        table.table.table-bordered.text-uppercase
+          thead
+            tr
+              th.text-center PRODUCT
+              th.text-center DESCRIPTION
+              th.text-center Unit price
+              th.text-center QUANTITY
+              th.text-center TOTAL
+          |     
+          tbody
+            tr
+              td
+                img(src="assets/img/cart/cart-stuff-1.jpg", alt="")
+              td 
+                strong Wedding Dress
+              td.text-grey.text-center $31.82
+              td
+                .box-table
+                  input.table-number(type="number" value="1" min='1')
+                  i.fa.fa-trash-o.pull-right(aria-hidden='true')
+              td.text-color.text-center $31.82
+            |       
+            tr
+              td
+                img(src="assets/img/cart/cart-stuff-1.jpg", alt="")
+              td 
+                strong ROSEMARY
+              td.text-grey.text-center $31.82
+              td
+                .box-table
+                  input.table-number(type="number" value="1" min='1')
+                  i.fa.fa-trash-o.pull-right(aria-hidden='true')
+              td.text-color.text-center $31.82
+            |       
+            tr
+              td
+                img(src="assets/img/cart/cart-stuff-1.jpg", alt="")
+              td 
+                strong Merrick Classic WEDDING DRESS
+              td.text-grey.text-center $29.88
+              td
+                .box-table
+                  input.table-number(type="number" value="1" min='1')
+                  i.fa.fa-trash-o.pull-right(aria-hidden='true')
+              td.text-color.text-center $31.82
+
+    .col-md-12.total-cart
+      .box-title
+        h3.cart-title.text-uppercase Cart Totals
+        
+      .col-md-8
+        .row
+          .col-xs-4.left-cart
+            p.text-uppercase
+              strong Total
+          .col-xs-8.right-cart
+            p.text-color $187.04
+            
+      .col-md-4
+        a.btn.btn-accent.btn-block.text-uppercase(href="../../../checkout.html") Check Out

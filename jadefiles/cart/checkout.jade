@@ -1,0 +1,140 @@
+section.cart-process.checkout
+  .row
+    .col-md-12
+      ul.process-bar.text-center.list-unstyled
+        li.pass-line
+          a(href="#") 1
+          p Shopping Cart
+        li.process-line.index-process
+          a(href="#") 2
+          p Check Out
+        li
+          a(href="#") 3
+          p Order Complete
+          
+    .wrap-shipping
+          
+      .col-md-8
+        .box-title
+          h4.cart-title.text-uppercase Shipping DETAIL
+        .row
+          .col-md-6
+            form
+              .form-group
+                input#firstbane.form-control(type='text', placeholder='First Name')
+
+          .col-md-6
+            form
+              .form-group
+                input#lastname.form-control(type='text', placeholder='Last Name')
+                  
+          .col-md-12
+            form
+              .form-group
+                input#phone.form-control(type='tel', placeholder='Phone')
+                  
+          .col-md-12
+            form
+              .form-group
+                input#address.form-control(type='text', placeholder='Address')
+                  
+          .col-md-6
+            form
+              .form-group
+                select#city.selectpicker.form-control(title='City')
+                  option Name
+                  |   
+                  option Tag
+                  |   
+                  option Price
+                  
+          .col-md-6
+            form
+              .form-group
+                select#district.selectpicker.form-control(title='District')
+                  option Name
+                  |   
+                  option Tag
+                  |   
+                  option Price
+                
+          .col-md-12
+            .checkbox
+              label
+                input(type='checkbox', value='')
+                | To make out a receipt
+
+    
+      .col-md-4
+        .box-title
+          h4.cart-title.text-uppercase YOUR ORDER
+          
+        table.text-uppercase
+          thead
+            tr
+              th Product
+              th.text-center
+              th.pull-right.text-center TOTAL
+          |     
+          tbody
+            tr
+              td.width Rosemary
+              td
+                span.small x 
+                | 1
+              td.pull-right.text-grey.text-center $31.82
+            |       
+            tr
+              td.width Rosemary
+              td
+                span.small x 
+                | 3
+              td.pull-right.text-grey.text-center $95.86
+              
+            tr
+              td.width Classic Wedding dress Style highlight
+              td
+                span.small x 
+                | 2
+              td.pull-right.text-grey.text-center $59.76
+              
+        ul.checkout-list.list-unstyled.text-uppercase
+          li 
+            span CART subtotal
+            span.pull-right $187.04
+            
+          li 
+            span SHIPPING
+            span.pull-right $10
+            
+          li 
+            span ORDER TOTAL
+            span.pull-right.text-color $197.04
+            
+        .box-title
+          h4.cart-title.text-uppercase PAYMENT METHODS
+            
+        .radio
+          label
+            input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+            | Cash on delivery
+            
+        .radio
+          label
+            input#optionsRadios2(type='radio', name='optionsRadios', value='option2', checked='', data-toggle="collapse" href="#collapse1")
+            | Direct Bank Tranfer
+            #collapse1.collapse
+              .well
+                p Xin vui lòng chuyển khoản tới số 0123465789
+            
+        .radio
+          label
+            input#optionsRadios3(type='radio', name='optionsRadios', value='option3', checked='')
+            | Online Payment
+            
+        a.btn.btn-accent.btn-block.text-uppercase(href="../../complete.html") Payment
+  
+
+        
+
+          
