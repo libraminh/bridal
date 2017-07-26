@@ -53,6 +53,17 @@ function openCart() {
     $(cart).toggleClass('open-cart');
     $(badge).toggleClass('open-cart');
   })
+
+  $(linkCart).focusin(function(){
+    $(cart).addClass('open-cart');
+    $(badge).addClass('open-cart');
+  })
+
+  $(linkCart).focusout(function(){
+    $(cart).removeClass('open-cart');
+    $(badge).removeClass('open-cart');
+  })
+
 }
 
 function activeColorCarousel() {
