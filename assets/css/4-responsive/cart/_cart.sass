@@ -19,11 +19,14 @@
 
   .wrap-table
     .box-table
-      i
+      .trash-icon
         float: none !important
         display: block !important
         width: 50px !important
         margin: 10px  0  0!important
+
+      input
+        margin-bottom: 5px
 
   .cart-complete-title
     &:after, &:before
@@ -42,6 +45,11 @@
   .cart-complete-title
     &:after, &:before
       width: 25%
+
+  .wrap-table
+    .box-table
+      .trash-icon
+        clear: both !important
 
 @media (max-width: 480px)
   .cart-complete-title

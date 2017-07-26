@@ -6467,11 +6467,10 @@ body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
 .quantity {
   position: relative; }
 
-.product-detail input[type=number] {
+.product-detail input[type=number]::-webkit-inner-spin-button, .product-detail input[type=number]::-webkit-outer-spin-button, .cart-page input[type=number]::-webkit-inner-spin-button, .cart-page input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
   -moz-appearance: textfield; }
-  .product-detail input[type=number]::-webkit-inner-spin-button, .product-detail input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0; }
 
 .quantity input {
   width: 80px;
@@ -6668,6 +6667,9 @@ a:hover {
 
 .text-color {
   color: #b2984a; }
+
+.index-page .main-nav .wrap-shopping-cart {
+  display: none !important; }
 
 section.wrap-thumb {
   margin: 0 !important;
@@ -7166,7 +7168,7 @@ section.cart-process {
     border: 1.5px solid #ebebeb; }
   section.cart-process .wrap-table .tabe-number::-webkit-inner-spin-button {
     opacity: 1 !important; }
-  section.cart-process .wrap-table .box-table i {
+  section.cart-process .wrap-table .box-table .trash-icon {
     font-size: 30px;
     margin-top: 7px;
     color: #bcbcbc; }
@@ -7467,11 +7469,13 @@ section.promotion-primary {
   .process-bar .process-line:after, .process-bar .process-line:before {
     top: 15% !important;
     width: 150px !important; }
-  .wrap-table .box-table i {
+  .wrap-table .box-table .trash-icon {
     float: none !important;
     display: block !important;
     width: 50px !important;
     margin: 10px 0 0 !important; }
+  .wrap-table .box-table input {
+    margin-bottom: 5px; }
   .cart-complete-title:after, .cart-complete-title:before {
     width: 28%; } }
 
@@ -7482,7 +7486,9 @@ section.promotion-primary {
     top: 15% !important;
     width: 85px !important; }
   .cart-complete-title:after, .cart-complete-title:before {
-    width: 25%; } }
+    width: 25%; }
+  .wrap-table .box-table .trash-icon {
+    clear: both !important; } }
 
 @media (max-width: 480px) {
   .cart-complete-title:after, .cart-complete-title:before {
