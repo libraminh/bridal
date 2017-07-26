@@ -6670,6 +6670,7 @@ a:hover {
   color: #b2984a; }
 
 section.wrap-thumb {
+  margin: 0 !important;
   height: 100vh;
   position: relative;
   background-image: url(../img/home/home-01.jpg);
