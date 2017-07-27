@@ -7,6 +7,7 @@ $(document).ready(function() {
   openCart();
   numberButton();
 
+
 })
 
 function numberButton() {
@@ -206,11 +207,9 @@ function scrollPage() {
       var sectionOffset = $(this.hash).offset().top - 100;
 
       if ( sectionOffset <= scrollbarLocation ) {
-        $(this).addClass('open');
-        $(this).siblings().addClass('close');
+        $(this).addClass('open').siblings().addClass('close');
         $(this).siblings().removeClass('open');
         $(this).siblings().removeClass('close');
-
       }
     })
   })

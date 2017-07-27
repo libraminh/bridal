@@ -6,7 +6,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(0-tools/font-awesome/css/font-awesome.min.css);
-@import url(0-tools/xzoom/xzoom.css);
+@import url(0-tools/button-hover.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6337,7 +6337,7 @@ select.selectpicker {
     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
       background: #869791; }
 
-.text-color, .text-grey, .box-title .cart-title, .main-nav .shopping-detail .totals, .main-nav .shopping-detail .price, .product-detail .detail-content span, .product-detail .detail-content .brand, .carousel-3 .caption a, section.cart-process .process-bar a, section.cart-process .process-bar .index-process p, .cart-complete-title {
+.text-color, .text-grey, .box-title .cart-title, .btn-accent-default, .btn-accent, .main-nav .shopping-detail .totals, .main-nav .shopping-detail .price, .product-detail .detail-content span, .product-detail .detail-content .brand, .carousel-3 .caption a, section.cart-process .process-bar a, section.cart-process .process-bar .index-process p, .cart-complete-title {
   font-weight: 600; }
 
 body::-webkit-scrollbar-track, html::-webkit-scrollbar-track {
@@ -6371,7 +6371,11 @@ body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
 
 .open {
   border-top: 1px solid #b2984a !important;
-  width: 100px !important; }
+  width: 100px !important;
+  -webkit-transform: scaleX(1) !important;
+  -ms-transform: scaleX(1) !important;
+  transform: scaleX(1) !important;
+  right: 0 !important; }
 
 .close {
   border-top: 1px solid #a2a2a2;
@@ -6395,12 +6399,12 @@ body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
   overflow: hidden;
   margin-bottom: 12px; }
   .box-title .cart-title {
-    display: inline-block;
+    display: block;
     position: relative; }
     .box-title .cart-title:after {
-      display: block;
+      display: inline-block;
       content: '';
-      width: 500%;
+      width: 1000%;
       height: 2px;
       background: #b2984a;
       position: absolute;
@@ -6424,21 +6428,34 @@ input, textarea {
     box-shadow: none !important;
     border-color: #ccc !important; }
 
-.font-weight, .btn-accent, .main-nav .navbar-brand .text-color, .main-nav .navbar-nav a, section.wrap-thumb .left-thumb h4, section.wrap-thumb .left-thumb h1, section.wrap-thumb .left-thumb p, .wrap-primary .sidebar-nav h3, .wrap-primary .top-sale .media-heading, .main-content .product-box .product-name, section.contact-map .left-contact-map h1, section.contact-map .left-contact-map h4, section.contact-mes h2, section.promotion-primary .col-md-5 .promo-date, section.promotion-primary .col-md-5 .promo-title {
+.font-weight, .btn-accent, .main-nav .navbar-brand .text-color, .main-nav .navbar-nav a, section.wrap-thumb .left-thumb h4, section.wrap-thumb .left-thumb h1, section.wrap-thumb .left-thumb p, section.product-home .left-thumb h4, section.product-home .left-thumb h1, section.product-home .left-thumb p, .wrap-primary .sidebar-nav h3, .wrap-primary .top-sale .media-heading, .main-content .product-box .product-name, section.contact-map .left-contact-map h1, section.contact-map .left-contact-map h4, section.contact-mes h2, section.promotion-primary .col-md-5 .promo-date, section.promotion-primary .col-md-5 .promo-title {
   font-weight: 600; }
 
-.btn-accent {
-  background: #b2984a;
+.btn-accent-default, .btn-accent {
   border-radius: 0;
-  color: #fff;
-  font-size: 15px;
   padding: 10px 25px;
+  font-size: 14px;
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
+
+.btn-accent-default {
+  color: #fff !important;
+  background: #b2984a !important; }
+  .btn-accent-default:hover {
+    background: #8e793b !important;
+    color: #fff !important; }
+
+.btn-accent {
+  background: none;
+  color: #fff !important; }
+  .btn-accent::before {
+    z-index: -1;
+    background: #b2984a !important; }
+  .btn-accent::after {
+    border-color: #b2984a !important; }
   .btn-accent:hover {
-    background: #8e793b;
-    color: #fff; }
+    color: #b2984a !important; }
 
 .btn-cart {
   color: #a2a2a2;
@@ -6690,13 +6707,12 @@ a:hover {
 
 section.wrap-thumb {
   margin: 0 !important;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-image: url(../img/home/home-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
-  background-attachment: fixed; }
+  background-position: top; }
   section.wrap-thumb .left-thumb {
     margin-top: 250px;
     margin-left: 130px;
@@ -6755,11 +6771,16 @@ section.thumb4 {
     padding: 5px 0;
     position: absolute;
     top: 0;
-    right: 0; }
+    right: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+    .direction .direct-line:hover {
+      border-color: #b2984a; }
   .direction .line1 {
     border-top: 1px solid #a2a2a2;
-    width: 60px;
-    top: 0px; }
+    top: 0px;
+    width: 60px; }
   .direction .line2 {
     border-top: 1px solid #a2a2a2;
     top: 25px;
@@ -6789,6 +6810,25 @@ section.product-home {
     margin-top: 10px; }
   section.product-home .navbar-brand {
     margin-top: 10px; }
+  section.product-home .left-thumb {
+    margin-top: 50px;
+    margin-left: 130px;
+    color: #fff; }
+    section.product-home .left-thumb:after {
+      display: block;
+      content: '';
+      width: 95%;
+      height: 1px;
+      background: #b2984a;
+      position: absolute;
+      top: 50px;
+      left: -100%; }
+    section.product-home .left-thumb h1 {
+      font-size: 45px;
+      margin-top: 0; }
+    section.product-home .left-thumb p {
+      margin: 25px 0;
+      color: #bcbcbc; }
 
 .box-thumb {
   margin-top: 50px; }
@@ -6936,6 +6976,8 @@ section.product-home {
 
 .product-detail .detail-content .tag {
   margin: 0; }
+  .product-detail .detail-content .tag a:hover {
+    color: #b2984a !important; }
 
 .product-detail .detail-content h2 {
   margin: 0 0 30px 0; }
@@ -7108,7 +7150,7 @@ section.contact-mes {
     border-radius: 0; }
   section.contact-mes textarea#comment {
     height: 84px; }
-  section.contact-mes .btn-accent {
+  section.contact-mes .btn-accent-default {
     border: none;
     padding: 0;
     height: 33px; }
@@ -7201,7 +7243,8 @@ section.cart-process {
   section.cart-process .total-cart .left-cart {
     background: #f5f5f5; }
   section.cart-process .total-cart .btn-accent {
-    padding: 7px 25px; }
+    padding: 10px 25px;
+    margin-top: -2px; }
 
 .wrap-shipping input, .wrap-shipping .bs-placeholder {
   border-radius: 0 !important; }
@@ -7249,6 +7292,10 @@ section.cart-process {
   margin: 0px 0 60px;
   color: #777; }
 
+.button-sidecart .btn-accent {
+  width: 350px;
+  float: right; }
+
 section.checkout .process-bar .process-line:before {
   background: #b2984a; }
 
@@ -7277,9 +7324,6 @@ section.promotion-primary {
     section.promotion-primary .col-md-5 .btn-accent {
       font-size: 13px;
       margin-top: 35px; }
-      section.promotion-primary .col-md-5 .btn-accent:hover {
-        -webkit-box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
-        box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2); }
   section.promotion-primary .promo-img {
     width: 100%;
     display: block;
@@ -7335,6 +7379,9 @@ section.promotion-primary {
     width: 100%;
     max-height: 450px; }
 
+.promo-content h4 {
+  margin: 20px 0 0; }
+
 .promo-content p {
   color: #777777;
   margin: 20px 0; }
@@ -7349,8 +7396,11 @@ section.promotion-primary {
 
 .comment-area {
   margin-bottom: 15px; }
-  .comment-area .cart-title:after {
-    width: 800%; }
+  .comment-area .metadata {
+    font-size: 12px;
+    color: #bcbcbc; }
+  .comment-area p {
+    color: #777777; }
 
 .post-comment-area input, .post-comment-area textarea {
   border-radius: 0; }
@@ -7422,6 +7472,8 @@ section.promotion-primary {
     margin-top: 150px; } }
 
 @media (max-width: 767px) {
+  .index-page .btn-accent {
+    width: 95% !important; }
   section.wrap-thumb {
     height: auto; }
     section.wrap-thumb .col-md-5 {
@@ -7482,11 +7534,13 @@ section.promotion-primary {
 
 @media (max-width: 1199px) {
   .cart-complete-title:after, .cart-complete-title:before {
-    width: 35%; } }
+    width: 35%; }
+  .button-sidecart .btn-accent {
+    width: 280px; } }
 
 @media (max-width: 991px) {
   .btn-accent {
-    margin-top: 20px;
+    margin-top: 10px !important;
     width: 100% !important; }
   .process-bar li {
     margin: 0 60px !important; }

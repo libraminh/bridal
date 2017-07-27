@@ -1,17 +1,17 @@
 .index-page
+
   .main-nav .wrap-shopping-cart
     display: none !important
 
 section.wrap-thumb
   margin: 0 !important
-  height: 100vh
+  min-height: 100vh
   position: relative
   background:
     image: url(../img/home/home-01.jpg)
     repeat: no-repeat
     size: cover
     position: top
-    attachment: fixed
 
   .left-thumb
     margin-top: 250px
@@ -83,11 +83,15 @@ section.thumb4
     position: absolute
     top: 0
     right: 0
+    transition: all .5s
+
+    &:hover
+      border-color: $accent-color
 
   .line1
     border-top: 1px solid $text-color-2
-    width: 60px
     top: 0px
+    width: 60px
 
   .line2
     border-top: 1px solid $text-color-2

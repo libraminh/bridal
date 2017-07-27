@@ -1,15 +1,36 @@
-.btn-accent
-  background: $accent-color
+%btn
   border-radius: 0
-  color: $white-color
-  font-size: 15px
-  @extend .font-weight
+  @extend %font-weight
   padding: 10px 25px
+  font-size: 14px
   transition: all .2s ease-in-out
 
+.btn-accent-default
+  @extend %btn
+  @extend %font-weight
+  color: $white-color !important
+  background: $accent-color !important
+
+
   &:hover
-    background: darken($accent-color, 10%)
-    color: $white-color
+    background: darken($accent-color, 10) !important
+    color: $white-color !important
+
+.btn-accent
+  @extend %btn
+  @extend .font-weight
+  background: none
+  color: $white-color !important
+
+  &::before
+   z-index: -1
+   background: $accent-color !important
+
+  &::after
+    border-color: $accent-color !important
+
+  &:hover
+    color: $accent-color !important
 
 // BTN CART
 .btn-cart

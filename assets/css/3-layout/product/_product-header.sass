@@ -19,3 +19,23 @@ section.product-home
 
   .navbar-brand
     margin-top: 10px
+
+  .left-thumb
+    margin-top: 50px
+    margin-left: 130px
+    color: $white-color
+
+    &:after
+      +line-yellow($accent-color, 95%, 50px, -100%)
+
+    h4, h1
+      @extend .font-weight
+
+    h1
+      font-size: 45px
+      margin-top: 0
+
+    p
+      margin: 25px 0
+      color: $text-color
+      @extend .font-weight

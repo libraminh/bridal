@@ -31,6 +31,8 @@ body, html
 .open
   border-top: 1px solid $accent-color !important
   width: 100px !important
+  transform: scaleX(1) !important
+  right: 0 !important
 
 .close
   border-top: 1px solid $text-color-2
@@ -59,14 +61,14 @@ body, html
   margin-bottom: 12px
 
   .cart-title
-    display: inline-block
+    display: block
     position: relative
     @extend %font-weight
 
     &:after
-      display: block
+      display: inline-block
       content: ''
-      width: 500%
+      width: 1000%
       height: 2px
       background: $accent-color
       position: absolute

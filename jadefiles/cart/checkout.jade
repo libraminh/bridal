@@ -121,7 +121,7 @@ section.cart-process.checkout
             
         .radio
           label
-            input#optionsRadios2(type='radio', name='optionsRadios', value='option2', checked='', data-toggle="collapse" href="#collapse1")
+            input#optionsRadios2(type='radio', name='optionsRadios', value='option2', checked='' data-target="#collapse1" data-toggle="collapse")
             | Direct Bank Tranfer
             #collapse1.collapse
               .well
@@ -132,7 +132,7 @@ section.cart-process.checkout
             input#optionsRadios3(type='radio', name='optionsRadios', value='option3', checked='')
             | Online Payment
             
-        a.btn.btn-accent.btn-block.text-uppercase(href="complete.html") Payment
+        a.btn.btn-accent.btn-block.text-uppercase.button14(href="complete.html") Payment
         
 
   
