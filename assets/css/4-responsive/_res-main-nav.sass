@@ -1,5 +1,6 @@
 @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min)
-  header
+  .wrap-shopping-cart
+    top: 70px !important
 
   .navbar-default
     height: 140px !important
@@ -13,6 +14,12 @@
 
   #bs-example-navbar-collapse-1
     clear: both !important
+
+@media (max-width: $screen-sm-max)
+  .shopping-detail
+    right: 60px
+    left: auto
+    top: 60px
 
 @media (max-width: $screen-sm-max - 226)
   .main-nav
@@ -36,15 +43,11 @@
     .navbar-collapse
       background: rgba($accent-color, 0.8)
 
-@media (max-width: 385px)
-  #shoppingmenu
-    margin: 0 !important
-
-  .navbar-brand
-    padding-right: 20px !important
-
-
 @media (max-width: $screen-xs-max)
+  .wrap-shopping-cart
+    top: 5px !important
+    right: 50px !important
+
   .product-home
     margin: 0 !important
 
@@ -52,9 +55,7 @@
     padding: 10px 0 0 !important
 
   .shopping-detail
-    width: 100% !important
-
-  .wrap-shopping-cart
+    width: 400px !important
 
   .wrap-cart-1
     margin-top: 10px
@@ -69,3 +70,36 @@
 
   #shoppingmenu
     display: inline !important
+
+@media (max-width: 580px)
+  .shopping-detail
+    top: 100px !important
+    right: 0 !important
+
+@media (max-width: 460px)
+  .shopping-detail
+    width: 360px !important
+
+@media (max-width: 420px)
+  .shopping-detail
+    width: 340px !important
+
+@media (max-width: 385px)
+  .wrap-shopping-cart
+    top: 5px !important
+    right: 80px !important
+
+  .shopping-detail
+    min-width: 300px !important
+    right: -50px !important
+    width: 330px !important
+
+  #shoppingmenu
+    margin: 0 !important
+
+  .navbar-brand
+    padding-right: 20px !important
+
+@media (max-width: 360px)
+  .shopping-detail
+    width: 300px !important
