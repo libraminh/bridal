@@ -11,12 +11,11 @@ html
       
 
   body.ChangeText.index-page
-    .home-wrap
-      include jadefiles/header.jade
-      
-      .home-sections
-        .fullpage
-          include jadefiles/home/home.jade
+    .fullpage
+      .home-wrap
+        include jadefiles/header.jade
+        .home-sections
+            include jadefiles/home/home.jade
         
     .social-group
       a(href="#"): i.fa.fa-facebook(aria-hidden='true')

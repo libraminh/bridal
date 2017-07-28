@@ -46,7 +46,7 @@ function onePageScroll() {
   		resetSliders: false,
   		fadingEffect: false,
   		normalScrollElements: '#element1, .element2',
-  		scrollOverflow: true,
+  		scrollOverflow: false,
   		scrollOverflowReset: false,
   		scrollOverflowOptions: null,
   		touchSensitivity: 15,
