@@ -6431,6 +6431,9 @@ input, textarea {
 .font-weight, .btn-accent, .main-nav .navbar-brand .text-color, .main-nav .navbar-nav a, section.wrap-thumb .left-thumb h4, section.wrap-thumb .left-thumb h1, section.wrap-thumb .left-thumb p, section.product-home .left-thumb h4, section.product-home .left-thumb h1, section.product-home .left-thumb p, .wrap-primary .sidebar-nav h3, .wrap-primary .top-sale .media-heading, .main-content .product-box .product-name, section.contact-map .left-contact-map h1, section.contact-map .left-contact-map h4, section.contact-mes h2, section.promotion-primary .col-md-5 .promo-date, section.promotion-primary .col-md-5 .promo-title {
   font-weight: 600; }
 
+.home-wrap {
+  overflow: hidden !important; }
+
 .btn-accent-default, .btn-accent {
   border-radius: 0;
   padding: 10px 25px;
@@ -6448,7 +6451,9 @@ input, textarea {
 
 .btn-accent {
   background: none;
-  color: #fff !important; }
+  color: #fff !important;
+  position: relative;
+  z-index: 1; }
   .btn-accent::before {
     z-index: -1;
     background: #b2984a !important; }
@@ -6479,7 +6484,7 @@ input, textarea {
 .social-group {
   position: fixed;
   left: 5%;
-  bottom: 5%;
+  bottom: 10%;
   z-index: 10; }
   .social-group i {
     padding: 0 10px;
@@ -6714,7 +6719,6 @@ section.wrap-thumb {
   background-size: cover;
   background-position: top; }
   section.wrap-thumb .left-thumb {
-    margin-top: 250px;
     margin-left: 130px;
     color: #fff; }
     section.wrap-thumb .left-thumb:after {
@@ -6732,6 +6736,8 @@ section.wrap-thumb {
     section.wrap-thumb .left-thumb p {
       margin: 25px 0;
       color: #bcbcbc; }
+  section.wrap-thumb .home-contact li {
+    margin: 5px 0; }
 
 section.thumb2 {
   background-image: url(../img/home/home-02.jpg); }
@@ -6760,6 +6766,8 @@ section.thumb4 {
     margin-top: 80px;
     max-width: 120%;
     display: block; }
+  section.thumb4 .left-thumb {
+    margin-top: 150px; }
 
 .direction {
   position: fixed;
@@ -6795,7 +6803,7 @@ section.thumb4 {
     width: 60px; }
 
 section.product-home {
-  height: 400px;
+  min-height: 400px;
   background-image: url(../img/product/banner-product.jpg);
   background-size: cover;
   background-attachment: scroll; }
@@ -7150,7 +7158,7 @@ section.contact-mes {
     border-radius: 0; }
   section.contact-mes textarea#comment {
     height: 84px; }
-  section.contact-mes .btn-accent-default {
+  section.contact-mes .btn-accent {
     border: none;
     padding: 0;
     height: 33px; }
@@ -7507,14 +7515,15 @@ section.promotion-primary {
     margin-top: 150px; } }
 
 @media (max-width: 767px) {
-  .index-page .btn-accent {
-    width: 95% !important; }
   section.wrap-thumb {
-    height: auto; }
+    height: auto;
+    background-size: cover; }
     section.wrap-thumb .col-md-5 {
       margin: 100px 0; }
     section.wrap-thumb .map {
       width: 100%; }
+    section.wrap-thumb .left-thumb {
+      margin-top: 200px; }
   section.thumb4 {
     padding: 40px 0; }
     section.thumb4 .col-md-5 {
@@ -7528,10 +7537,6 @@ section.promotion-primary {
     background: #b2984a !important;
     position: relative;
     z-index: 1000; } }
-
-@media (max-width: 360px) {
-  .left-thumb {
-    margin: 0 !important; } }
 
 @media (max-width: 991px) {
   .wrap-text {
@@ -7565,11 +7570,13 @@ section.promotion-primary {
 
 @media (max-width: 767px) {
   section.promotion-primary .wrap-promo-content {
-    margin: 30px 0 40px; } }
+    margin: 30px 0 40px; }
+  .product-home .header-title h1 {
+    font-size: 40px !important; } }
 
-@media (max-width: 767px) {
-  .wrap-thumb {
-    margin-top: 30px; } }
+@media (max-width: 560px) {
+  .header-title {
+    margin: 50px 0 0 10px !important; } }
 
 @media (max-width: 1199px) {
   .cart-complete-title:after, .cart-complete-title:before {

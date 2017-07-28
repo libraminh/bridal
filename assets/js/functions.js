@@ -1,15 +1,95 @@
 $(document).ready(function() {
   scrollPage();
-  scrollReveal();
   playCarousel();
+  scrollReveal();
   showPopover();
   activeColorCarousel();
   openCart();
   numberButton();
-
+  onePageScroll();
 
 })
 
+// One Page Scroll
+function onePageScroll() {
+  if($('body').is('.index-page')) {
+    $('.fullpage').fullpage({
+      //Navigation
+  		menu: '#menu',
+  		lockAnchors: false,
+  		// anchors:['firstPage', 'secondPage'],
+  		navigation: true,
+  		navigationPosition: 'right',
+  		// navigationTooltips: ['firstSlide', 'secondSlide'],
+  		showActiveTooltip: false,
+  		slidesNavigation: false,
+  		slidesNavPosition: 'bottom',
+
+  		//Scrolling
+  		css3: true,
+  		scrollingSpeed: 700,
+  		autoScrolling: true,
+  		fitToSection: true,
+  		fitToSectionDelay: 1000,
+  		scrollBar: true,
+  		easing: 'easeInOutCubic',
+  		easingcss3: 'ease',
+  		loopBottom: false,
+  		loopTop: false,
+  		loopHorizontal: true,
+  		continuousVertical: false,
+  		continuousHorizontal: false,
+  		scrollHorizontally: false,
+  		interlockedSlides: false,
+  		dragAndMove: false,
+  		offsetSections: false,
+  		resetSliders: false,
+  		fadingEffect: false,
+  		normalScrollElements: '#element1, .element2',
+  		scrollOverflow: false,
+  		scrollOverflowReset: false,
+  		scrollOverflowOptions: null,
+  		touchSensitivity: 15,
+  		normalScrollElementTouchThreshold: 5,
+  		bigSectionsDestination: null,
+
+  		//Accessibility
+  		keyboardScrolling: true,
+  		animateAnchor: true,
+  		recordHistory: true,
+
+  		//Design
+  		controlArrows: true,
+  		verticalCentered: true,
+  		sectionsColor : ['#ccc', '#fff'],
+  		paddingTop: '3em',
+  		paddingBottom: '10px',
+  		fixedElements: '#header, .footer',
+  		responsiveWidth: 0,
+  		responsiveHeight: 0,
+  		responsiveSlides: false,
+  		parallax: false,
+  		parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+  		//Custom selectors
+  		sectionSelector: '.section',
+  		slideSelector: '.slide',
+
+  		lazyLoading: true,
+
+  		//events
+  		onLeave: function(index, nextIndex, direction){},
+  		afterLoad: function(anchorLink, index){},
+  		afterRender: function(){},
+  		afterResize: function(){},
+  		afterResponsive: function(isResponsive){},
+  		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+  		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  	});
+  }
+}
+
+// Numbe Shop Button
 function numberButton() {
   jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"><i class="fa fa-angle-up" aria-hidden="true"></i></div><div class="quantity-button quantity-down"><i class="fa fa-angle-down" aria-hidden="true"></i></div></div>').insertAfter('.quantity input');
   jQuery('.quantity').each(function() {
@@ -153,7 +233,7 @@ $(window).scroll(function(){
 
 function changeTextColor() {
 
-  if($('body').is('.ChangeText')) {
+  if($('bodya').is('.index-pagea')) {
 
     var positionSection1 = $('section.thumb3').offset().top,
         positionSection2 = $('section.thumb4').offset().top,
