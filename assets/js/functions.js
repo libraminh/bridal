@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  scrollPage();
   playCarousel();
   scrollReveal();
   showPopover();
@@ -125,6 +124,7 @@ function numberButton() {
   });
 }
 
+// Cart Button
 function openCart() {
   var linkCart = $('.main-nav #shoppingmenu'),
       cart = $('.main-nav #shoppingmenu #Capa_1'),
@@ -147,6 +147,7 @@ function openCart() {
 
 }
 
+// Border Active Carousel
 function activeColorCarousel() {
   var pic = $('.carousel-4 img, .carousel-2 img');
 
@@ -156,12 +157,14 @@ function activeColorCarousel() {
   })
 }
 
+// Popover
 function showPopover() {
   $('#optionsRadios2').popover({
     'placement' : 'top'
   })
 }
 
+// Carousel
 function playCarousel() {
   if($('body').is('.product-detail')) {
 
@@ -173,7 +176,7 @@ function playCarousel() {
           navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
           responsive:{
             0:{
-                items:2,
+                items:1,
             },
             768:{
                 margin: 20,
@@ -233,7 +236,7 @@ $(window).scroll(function(){
 
 function changeTextColor() {
 
-  if($('bodya').is('.index-pagea')) {
+  if($('body').is('.index-page')) {
 
     var positionSection1 = $('section.thumb3').offset().top,
         positionSection2 = $('section.thumb4').offset().top,
@@ -248,7 +251,7 @@ function changeTextColor() {
       $(social).removeClass('change-color');
     }
 
-    if(positionSection1 - wHeight/10 < wScroll && wScroll < positionSection2) {
+    if(positionSection1 - wHeight/10 < wScroll && wScroll < positionSection2 - wHeight/10) {
       $(link).addClass('change-color');
     } else {
       $(link).removeClass('change-color');
@@ -265,32 +268,4 @@ function scrollReveal() {
   sr.reveal('.promo-content-odd:first-child', { duration: 1200, delay: 300, distance: '400px', origin: 'left' });
   sr.reveal('.promo-content-odd', { duration: 1200, distance: '400px', origin: 'left' });
   sr.reveal('.promo-content-even', { duration: 1200, distance: '400px', origin: 'right' });
-}
-
-function scrollPage() {
-  var scrollLink = $('.scroll');
-
-  // Smooth scrolling
-  scrollLink.click(function(e) {
-    e.preventDefault();
-    $('body,html').animate({
-      scrollTop: $(this.hash).offset().top
-    }, 1000 );
-  });
-
-  // Active link switching
-  $(window).scroll(function() {
-    var scrollbarLocation = $(this).scrollTop();
-
-    scrollLink.each(function() {
-
-      var sectionOffset = $(this.hash).offset().top - 100;
-
-      if ( sectionOffset <= scrollbarLocation ) {
-        $(this).addClass('open').siblings().addClass('close');
-        $(this).siblings().removeClass('open');
-        $(this).siblings().removeClass('close');
-      }
-    })
-  })
 }

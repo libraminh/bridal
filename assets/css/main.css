@@ -7020,6 +7020,12 @@ section.product-home {
 .product-des, .carousel-like {
   margin-top: 30px; }
 
+.carousel-like .item {
+  padding-bottom: 5px; }
+
+.carousel-like .caption {
+  padding-top: 20px; }
+
 .carousel-2, .carousel-3 {
   position: relative; }
   .carousel-2 .owl-next, .carousel-2 .owl-prev, .carousel-3 .owl-next, .carousel-3 .owl-prev {
