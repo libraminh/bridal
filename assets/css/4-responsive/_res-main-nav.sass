@@ -44,9 +44,17 @@
       background: rgba($accent-color, 0.8)
 
 @media (max-width: $screen-xs-max)
+  .index-page
+    .navbar-brand
+      margin-top: 8px !important
+
+  .navbar-toggle, .collapsed
+    float: left
+    margin: 10px 0 0 20px
+
   .wrap-shopping-cart
     top: 5px !important
-    right: 50px !important
+    right: 15px !important
 
   .product-home
     margin: 0 !important
@@ -74,7 +82,14 @@
 @media (max-width: 580px)
   .shopping-detail
     top: 100px !important
-    right: 0 !important
+    right: 56px !important
+
+@media (max-width: 500px)
+  #shoppingmenu
+    margin-right: 25px !important
+
+  .shopping-detail
+    right: 30px !important
 
 @media (max-width: 460px)
   .shopping-detail
@@ -96,6 +111,7 @@
 
   #shoppingmenu
     margin: 0 !important
+    right: -35px
 
   .navbar-brand
     padding-right: 20px !important
@@ -103,3 +119,9 @@
 @media (max-width: 360px)
   .shopping-detail
     width: 300px !important
+
+  #shoppingmenu
+    right: -35px
+
+  .navbar-brand
+    padding: 15px 5px !important
